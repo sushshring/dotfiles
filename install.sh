@@ -205,6 +205,18 @@ if [[ "$CURRENTSHELL" != "/usr/local/bin/zsh" ]]; then
   sudo dscl . -change /Users/$USER UserShell $SHELL /usr/local/bin/zsh > /dev/null 2>&1
   ok
 fi
+# Check for brew_packages file and install all packages listed there
+if [[ -f "./brew_packages" ]]; then
+  while read p; do
+    require_brew $p
+  done < brew_packages
+fi
+# Check for brew_cask_packages file and install all packages listed there
+if [[ -f "./brew_cask_packages" ]]; then
+  while read p; do
+    require_cask $p
+  done < brew_cask_packages
+fi
 
 if [[ ! -d "./oh-my-zsh/custom/themes/powerlevel9k" ]]; then
   git clone https://github.com/bhilburn/powerlevel9k.git oh-my-zsh/custom/themes/powerlevel9k

@@ -58,3 +58,4 @@ unsetopt correct
 # run fortune on new terminal :)
 fortune
 alias leanserv='cd $LEANPLUM_ROOT && Tools/developer-env/localhost.bash'
+eval "$(hub alias -s)"
