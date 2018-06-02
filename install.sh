@@ -191,6 +191,8 @@ require_brew fontconfig
 # update zsh to latest
 require_brew zsh
 # update ruby to latest
+# Install Github helper
+require_brew hub
 # use versions of packages installed with homebrew
 RUBY_CONFIGURE_OPTS="--with-openssl-dir=`brew --prefix openssl` --with-readline-dir=`brew --prefix readline` --with-libyaml-dir=`brew --prefix libyaml`"
 require_brew ruby
