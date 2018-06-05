@@ -59,3 +59,6 @@ unsetopt correct
 fortune
 alias leanserv='cd $LEANPLUM_ROOT && Tools/developer-env/localhost.bash'
 eval "$(hub alias -s)"
+
+# added by travis gem
+[ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
