@@ -32,7 +32,7 @@ export LEANPLUM_ROOT=~/Projects/Leanplum/Leanplum
 export PATH=$PATH:~/Projects/Leanplum/gauntlet/bin
 # Which plugins would you like to load? (plugins can be found in ~/.dotfiles/oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(colorize compleat dirpersist autojump git gulp history cp)
+plugins=(colorize compleat dirpersist autojump git gulp history cp npm brew z)
 
 source $ZSH/oh-my-zsh.sh
 source $LEANPLUM_ROOT/Tools/developer-env/leanplumrc
@@ -59,8 +59,7 @@ unsetopt correct
 fortune
 alias leanserv='cd $LEANPLUM_ROOT && Tools/developer-env/localhost.bash'
 eval "$(hub alias -s)"
+eval $(thefuck --alias)
 
 # added by travis gem
 [ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
-
-eval $(thefuck --alias)
