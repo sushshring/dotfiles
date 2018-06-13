@@ -62,3 +62,5 @@ eval "$(hub alias -s)"
 
 # added by travis gem
 [ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
+
+eval $(thefuck --alias)
