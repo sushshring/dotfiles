@@ -1,6 +1,6 @@
 [user]
-  name = Sushrut Shringarputale
-  email = sushrut.shringarputale@leanplum.com
+	name = Sushrut Shringarputale
+	email = sushrut.shringarputale@leanplum.com
 [github]
   # https://github.com/blog/180-local-github-config
   user = sushshring
@@ -70,7 +70,9 @@
   dv = !git diff | vim
   who = shortlog -s --
   ph = push
+  phu = push -u
   pl = pull
+  plp = pull --prune
   lp = log -p
   lod = log --oneline --decorate
   lg = log --graph
@@ -148,6 +150,7 @@
   cob = checkout -b
   sno = show --name-only
   logsimple = log --graph --abbrev-commit --pretty=oneline --all --decorate
+  pullp = pull --prune
 [apply]
   whitespace = nowarn
 
@@ -186,7 +189,7 @@
   clean = expand -t 4
 
 [push]
-  default = simple
+  default = upstream
 
 [filter "media"]
   required = true
@@ -194,6 +197,7 @@
   smudge = git media smudge %f
 
 [filter "lfs"]
-  clean = git-lfs clean %f
-  smudge = git-lfs smudge %f
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
   required = true
+	process = git-lfs filter-process
