@@ -54,17 +54,17 @@ module.exports = {
     'gpgtools',
     //'ireadfast',
     'iterm2',
-    'little-snitch',
-    'micro-snitch',
-    //'macvim',
-    'sizeup',
+    //'little-snitch',
+    //'micro-snitch',
+    'macvim',
+    //'sizeup',
     //'sketchup',
     'slack',
     'the-unarchiver',
     //'torbrowser',
     //'transmission',
     //'vlc',
-    'xquartz'
+    //'xquartz'
   ],
   gem: [
     'git-up'

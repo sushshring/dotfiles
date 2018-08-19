@@ -1,6 +1,7 @@
 [user]
 	name = Sushrut Shringarputale
-	email = sushrut.shringarputale@leanplum.com
+	email = contact@sushshring.me
+	signingkey = 6709C7F0A4A80363
 [github]
   # https://github.com/blog/180-local-github-config
   user = sushshring
@@ -199,5 +200,7 @@
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
-  required = true
+	required = true
 	process = git-lfs filter-process
+[commit]
+	gpgsign = true

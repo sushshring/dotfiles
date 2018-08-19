@@ -6,11 +6,7 @@ colorscheme solarized
 syntax enable
 let g:solarized_termtrans = 1
 call togglebg#map("<F5>")
-if has('gui_running')
-    set background=light
-else
-    set background=dark
-endif
+set background=light
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vundle
