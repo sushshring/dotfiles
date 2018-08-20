@@ -40,7 +40,16 @@ module.exports = {
     'vim --with-override-system-vi',
     'watch',
     // Install wget with IRI support
-    'wget --enable-iri'
+    'wget --enable-iri',
+    // Github CLI support
+    'hub',
+    // Maven CLI
+    'maven',
+    // Travis CLI
+    'travis',
+    // The-Fuck auto correction
+    'thefuck',
+
   ],
   cask: [
     //'adium',
@@ -61,13 +70,13 @@ module.exports = {
     //'sketchup',
     'slack',
     'the-unarchiver',
+    'google_cloud_sdk',
     //'torbrowser',
     //'transmission',
     //'vlc',
     //'xquartz'
   ],
   gem: [
-    'git-up'
   ],
   npm: [
     'antic',

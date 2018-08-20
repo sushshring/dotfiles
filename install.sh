@@ -191,8 +191,6 @@ require_brew fontconfig
 # update zsh to latest
 require_brew zsh
 # update ruby to latest
-# Install Github helper
-require_brew hub
 # use versions of packages installed with homebrew
 RUBY_CONFIGURE_OPTS="--with-openssl-dir=`brew --prefix openssl` --with-readline-dir=`brew --prefix readline` --with-libyaml-dir=`brew --prefix libyaml`"
 require_brew ruby
@@ -204,18 +202,6 @@ if [[ "$CURRENTSHELL" != "/usr/local/bin/zsh" ]]; then
   # chsh -s /usr/local/bin/zsh
   sudo dscl . -change /Users/$USER UserShell $SHELL /usr/local/bin/zsh > /dev/null 2>&1
   ok
-fi
-# Check for brew_packages file and install all packages listed there
-if [[ -f "./brew_packages" ]]; then
-  while read p; do
-    require_brew $p
-  done < brew_packages
-fi
-# Check for brew_cask_packages file and install all packages listed there
-if [[ -f "./brew_cask_packages" ]]; then
-  while read p; do
-    require_cask $p
-  done < brew_cask_packages
 fi
 
 if [[ ! -d "./oh-my-zsh/custom/themes/powerlevel9k" ]]; then
