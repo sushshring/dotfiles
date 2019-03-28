@@ -14,3 +14,5 @@ source ~/.iterm2_shell_integration.`basename $SHELL`
 export PATH="$PATH:$HOME/.rvm/bin"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+[ -s "/Users/sps5394/.jabba/jabba.sh" ] && source "/Users/sps5394/.jabba/jabba.sh"

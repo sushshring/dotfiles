@@ -1,4 +1,4 @@
-# Path to your oh-my-zsh configuration.
+## Path to your oh-my-zsh configuration.
 export ZSH=$HOME/.dotfiles/oh-my-zsh
 # if you want to use this, change your non-ascii font to Droid Sans Mono for Awesome
 # POWERLEVEL9K_MODE='awesome-patched'
@@ -81,7 +81,7 @@ function precmd () {
 }
 
 # User configuration
-
+export GOPATH="${HOME}/go"
 export PATH="$PATH:$HOME/npm/bin"
 export ANDROID_HOME=${HOME}/Library/Android/sdk
 export PATH=${PATH}:${ANDROID_HOME}/tools
@@ -89,6 +89,7 @@ export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 export PATH="$PATH:$HOME/Library/Python/2.7/bin"
 export PATH="$PATH:$HOME/Library/Python/3.6/bin"
 export PATH="$PATH:/usr/local/mysql-shell/bin"
+export PATH="$PATH:${HOME}/go/bin"
 export EDITOR="gvim"
 export REACT_EDITOR="vsc"
 # Customize to your needs...
@@ -101,7 +102,7 @@ eval "$(hub alias -s)"
 # added by travis gem
 [ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
 
-DEFAULT_USER='sushrutshringarputale'
+DEFAULT_USER='sps5394'
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -112,7 +113,7 @@ DEFAULT_USER='sushrutshringarputale'
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias atom="open -a atom"
 alias vsc="open -a Visual\ Studio\ Code"
-alias cdPSU="cd /Users/sushrutshringarputale/Library/Mobile\ Documents/com\~apple\~CloudDocs/Penn\ State"
+alias cdPSU="cd /Users/sps5394/Library/Mobile\ Documents/com\~apple\~CloudDocs/Penn\ State"
 alias rmswp="rm -r *~ && rm -r .*~"
 alias readme="cat README"
 
@@ -123,8 +124,14 @@ eval "$(thefuck --alias)"
 export PATH="$PATH:$HOME/.rvm/bin"
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/sushrutshringarputale/Applications/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/sushrutshringarputale/Applications/google-cloud-sdk/path.zsh.inc'; fi
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
+if [ -f '/Users/sps5394/Applications/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/sps5394/Applications/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/sushrutshringarputale/Applications/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/sushrutshringarputale/Applications/google-cloud-sdk/completion.zsh.inc'; fi
-# fortune
+if [ -f '/Users/sps5394/Applications/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/sps5394/Applications/google-cloud-sdk/completion.zsh.inc'; fi
+
+# added by travis gem
+[ -f /Users/sps5394/.travis/travis.sh ] && source /Users/sps5394/.travis/travis.sh
+
+[ -s "/Users/sps5394/.jabba/jabba.sh" ] && source "/Users/sps5394/.jabba/jabba.sh"

@@ -142,6 +142,7 @@
   configpushnothing = config push.default nothing
   configpushmatching = config push.default matching
   configpushcurrent = config push.default current
+  pushc = push --set-upstream origin
 
   nr = "!sh -c 'git init $0'"
   echoparam1 = "!sh -c 'echo $0'"
