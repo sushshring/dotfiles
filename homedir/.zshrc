@@ -37,6 +37,7 @@ osx
 httpie
 jsontools
 vi-mode
+docker
 common-aliases
 git-extras
 node
